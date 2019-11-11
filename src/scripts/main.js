@@ -4,6 +4,8 @@
     or the dashboard should be rendered.
 */
 
+import formBuilder from "./tasks/formBuilderAndEditor.js"
+
 const message = "Time to build an application that gives you all the information you need in a Nutshell"
 
 document.querySelector("#container").innerHTML = `<h1>${message}</h1>`
@@ -13,3 +15,6 @@ console.log(message)
 let i = sessionStorage.getItem("currentUser",1)
 console.log( i)
 console.log( i)
+
+console.log(formBuilder.addFormBuilder())
+console.log(formBuilder.newTaskButton())
