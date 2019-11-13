@@ -18,6 +18,7 @@ console.log(formBuilder.newTaskButton())
 
 // Chat Message Module
 
+displayOnDOM.displayMessageMain()
 displayOnDOM.displayCreateNewMessageForm()
 
 const messageTEST = {
