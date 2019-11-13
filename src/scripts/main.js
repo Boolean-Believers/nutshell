@@ -8,6 +8,7 @@ import formBuilder from "./tasks/formBuilderAndEditor.js"
 import displayOnDOM from "./messages/renderToDOM.js"
 import taskListForm from "./tasks/taskListHTMLBuilder.js"
 import renderToDom from "./tasks/renderToDOM.js"
+import newsFormBuilder from "./news/newsFormBuilder.js"
 
 sessionStorage.setItem("currentUser",1)
 let i = sessionStorage.getItem("currentUser",1)
