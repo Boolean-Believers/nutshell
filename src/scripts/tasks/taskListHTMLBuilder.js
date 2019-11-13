@@ -9,6 +9,5 @@ const taskListHTMLBuilder = (task) =>
         <button id="taskDeleteButton--${task.id}">DELETE</button>
     </section>
     `;
-  
 
   export default taskListHTMLBuilder;
