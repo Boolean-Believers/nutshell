@@ -5,6 +5,7 @@
 */
 
 import formBuilder from "./tasks/formBuilderAndEditor.js"
+import createForms from "./messages/addEditMessageFormBuilder.js"
 
 const message = "Time to build an application that gives you all the information you need in a Nutshell"
 
@@ -18,3 +19,10 @@ console.log( i)
 
 console.log(formBuilder.addFormBuilder())
 console.log(formBuilder.newTaskButton())
+console.log(createForms.createNewMessageForm())
+
+const messageTEST = {
+    content: "Here's some dummy text",
+    id: 1
+}
+console.log(createForms.createEditMessageForm(messageTEST))
