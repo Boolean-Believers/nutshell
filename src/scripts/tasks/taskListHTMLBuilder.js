@@ -1,5 +1,5 @@
-taskListHTMLBuilder(task) {
-    return `
+const taskListHTMLBuilder = (task) =>
+    `
     <section id="taskID--${task.id}">
         <label for="completedTask">Mark Complete</label>
         <input id="completedTask--${task.id}" type="checkbox">
@@ -9,4 +9,6 @@ taskListHTMLBuilder(task) {
         <button id="taskDeleteButton--${task.id}">DELETE</button>
     </section>
     `;
-  }
+  
+
+  export default taskListHTMLBuilder;

@@ -6,6 +6,7 @@
 
 import formBuilder from "./tasks/formBuilderAndEditor.js"
 import displayOnDOM from "./messages/renderToDOM.js"
+import taskListForm from "./tasks/taskListHTMLBuilder.js"
 
 sessionStorage.setItem("currentUser",1)
 let i = sessionStorage.getItem("currentUser",1)
@@ -23,3 +24,11 @@ const messageTEST = {
         id: 1
     }
     displayOnDOM.displayEditMessageForm(messageTEST)
+
+
+    const taskListTEST = {
+        taskName: "I'm a task, nice to meet you",
+        id: 1,
+        completionDate: 2099/11/10
+    }
+    console.log(taskListForm(taskListTEST))
