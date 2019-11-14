@@ -56,5 +56,11 @@ const messageTEST = {
     renderToDom.renderEditFormBuilder()
     renderToDom.rendertaskListHTMLBuilder(taskListTEST)
 
-    
+    const articleTest = [{
+        
+    }]
+
+
 renderNewsToDom.renderNewArticleButton()
+renderNewsToDom.renderNewArticleForm()
+// renderNewsToDom.renderEditArticleForm()
