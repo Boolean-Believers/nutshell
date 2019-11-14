@@ -8,6 +8,8 @@ import formBuilder from "./tasks/formBuilderAndEditor.js"
 import displayOnDOM from "./messages/renderToDOM.js"
 import taskListForm from "./tasks/taskListHTMLBuilder.js"
 import renderToDom from "./tasks/renderToDOM.js"
+import searchFriendBuilder from "./friends/friendListHTMLBuilder.js"
+import friendsOnTheDom from "./friends/renderDomFriends"
 
 sessionStorage.setItem("currentUser",1)
 let i = sessionStorage.getItem("currentUser",1)
@@ -37,3 +39,5 @@ const messageTEST = {
     renderToDom.renderNewTaskButton()
     renderToDom.renderEditFormBuilder()
     renderToDom.rendertaskListHTMLBuilder(taskListTEST)
+    friendsOnTheDom.renderSearchFriend()
+    friendsOnTheDom.editFriends()
