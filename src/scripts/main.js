@@ -11,8 +11,9 @@ import chatMessagesManager from "./messages/chatMessagesManager.js"
 import data from "./messages/apiManager.js"
 import renderToDom from "./tasks/renderToDOM.js"
 import formBuilderAndEditor from "./events/formBuilderAndEditor.js"
+import eventApiManager from "./events/apiManager.js"
 
-console.log(formBuilderAndEditor);
+eventApiManager.getAllEvents();
 
 sessionStorage.setItem("currentUser",1)
 let i = sessionStorage.getItem("currentUser",1)
