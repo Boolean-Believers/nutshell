@@ -10,14 +10,11 @@ button {
 #messages-section {
     background-color: lightblue;
     width: 100%;
-    padding-top: 10px;
-    margin-top: 10px;
 }
 #messaging-section {
-    border: 2px grey solid;
-    width: 33%;
     margin-left: 15px;
-    padding: 20px;
+    border: 1px grey solid;
+    width: 33%;
 }
 
 #messaging-section > h2 {

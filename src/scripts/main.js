@@ -11,11 +11,12 @@ import chatMessagesManager from "./messages/chatMessagesManager.js"
 import data from "./messages/apiManager.js"
 import renderToDom from "./tasks/renderToDOM.js"
 import formBuilderAndEditor from "./events/formBuilderAndEditor.js"
+import eventListenerManager from "./messages/eventListeners.js"
 
 console.log(formBuilderAndEditor);
 
-sessionStorage.setItem("currentUser",1)
-let i = sessionStorage.getItem("currentUser",1)
+sessionStorage.setItem("currentUser", 1)
+let i = sessionStorage.getItem("currentUser", 1)
 // console.log( i)
 
 // console.log(formBuilder.addFormBuilder())
@@ -27,12 +28,12 @@ displayOnDOM.displayMessageMain()
 displayOnDOM.displayCreateNewMessageForm()
 
 const messageTEST = {
-        content: "Here's some dummy text",
-        id: 1
-    }
-    displayOnDOM.displayEditMessageForm(messageTEST)
+    content: "Here's some dummy text",
+    id: 1
+}
+displayOnDOM.displayEditMessageForm(messageTEST)
 
-    data.getAllMessages()
+data.getAllMessages()
     .then(messages => {
         let messagingSection = document.querySelector("#messaging-section")
         console.log(messages)
@@ -40,16 +41,16 @@ const messageTEST = {
         messagingSection.innerHTML += `<section id="messages-section"><h2>Messages</h2> ${chatMessagesManager.chatMessageArray(messages)}</section>`
     })
 
+    eventListenerManager.addEventListenerToNewMessageContainer()
 
 
-
-    const taskListTEST = [{
-        taskName: "I'm a task, nice to meet you",
-        id: 1,
-        completionDate:"2099/11/10"
-    }]
-    // console.log(taskListForm(taskListTEST))
-    renderToDom.renderNewTaskForm()
-    renderToDom.renderNewTaskButton()
-    renderToDom.renderEditFormBuilder()
-    renderToDom.rendertaskListHTMLBuilder(taskListTEST)
+const taskListTEST = [{
+    taskName: "I'm a task, nice to meet you",
+    id: 1,
+    completionDate: "2099/11/10"
+}]
+// console.log(taskListForm(taskListTEST))
+renderToDom.renderNewTaskForm()
+renderToDom.renderNewTaskButton()
+renderToDom.renderEditFormBuilder()
+renderToDom.rendertaskListHTMLBuilder(taskListTEST)
