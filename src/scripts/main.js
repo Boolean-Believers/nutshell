@@ -10,7 +10,9 @@ import taskListForm from "./tasks/taskListHTMLBuilder.js"
 import chatMessagesManager from "./messages/chatMessagesManager.js"
 import data from "./messages/apiManager.js"
 import renderToDom from "./tasks/renderToDOM.js"
+import newsFormBuilder from "./news/newsFormBuilder.js"
 import formBuilderAndEditor from "./events/formBuilderAndEditor.js"
+import renderNewsToDom from "./news/renderToDom.js"
 
 console.log(formBuilderAndEditor);
 
@@ -53,3 +55,15 @@ const messageTEST = {
     renderToDom.renderNewTaskButton()
     renderToDom.renderEditFormBuilder()
     renderToDom.rendertaskListHTMLBuilder(taskListTEST)
+
+    const articleTest = [{
+        id: 0,
+        name: "JavaScript",
+        synopsis:"Leave me alone to die.",
+        url: "http://www.alinkgoeshere.com"
+    }]
+
+
+renderNewsToDom.renderNewArticleButton()
+renderNewsToDom.renderNewArticleForm()
+// renderNewsToDom.renderEditArticleForm(articleTest)
