@@ -18,7 +18,7 @@ const createForms = {
         <label for="editChatMessage">Edit Message</label>
         <input id="editChatMessage" type="text" value="${messageToEdit.content}"></input>
         </section>
-        <button class="edit-button button" id="submitEditedMessage-Button--${messageToEdit.id}">Save Changes</button>
+        <button class="update-button button" id="saveEditedMessage-Button--${messageToEdit.id}">Save Edits</button>
         `
     }
 }

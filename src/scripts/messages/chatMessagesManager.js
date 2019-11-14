@@ -7,6 +7,7 @@ const chatMessagesManager = {
     <section id="chatMessage--${message.id}">
     <div id="chatMessageSender--${message.user.id}">Author: ${message.user.username}</div>
     <p>Message: ${message.message}</p>
+    <button class="edit-button button" id="editMessage-button--${message.id}">Edit Message</button>
     </section>
     `
 },
