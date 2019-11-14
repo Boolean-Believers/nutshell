@@ -9,6 +9,7 @@ import displayOnDOM from "./messages/renderToDOM.js"
 import taskListForm from "./tasks/taskListHTMLBuilder.js"
 import chatMessagesManager from "./messages/chatMessagesManager.js"
 import data from "./messages/apiManager.js"
+import renderToDom from "./tasks/renderToDOM.js"
 
 sessionStorage.setItem("currentUser",1)
 let i = sessionStorage.getItem("currentUser",1)
@@ -39,9 +40,13 @@ const messageTEST = {
 
 
 
-    const taskListTEST = {
-        taskName: "I'm a task, nice) to meet you",
+    const taskListTEST = [{
+        taskName: "I'm a task, nice to meet you",
         id: 1,
-        completionDate: 2099/11/10
-    }
-    console.log(taskListForm(taskListTEST))
+        completionDate:"2099/11/10"
+    }]
+    // console.log(taskListForm(taskListTEST))
+    renderToDom.renderNewTaskForm()
+    renderToDom.renderNewTaskButton()
+    renderToDom.renderEditFormBuilder()
+    renderToDom.rendertaskListHTMLBuilder(taskListTEST)
