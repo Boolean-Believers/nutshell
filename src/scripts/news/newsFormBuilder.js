@@ -29,24 +29,24 @@ const newsFormBuilder = {
         `;
   },
 
-  editArticleFormBuilder() {
+  editArticleFormBuilder(articleToEdit) {
       return `
       <article id="editArticleForm"><h1>Edit Article</h1>
         <section>
             <label for="editArticleTitle">News Article</label>
-            <input type="text" id="editArticleTitle">
+            <input type="text" id="editArticleTitle" value="${articleToEdit.name}">
         </section>
     
         <section>
             <label for="editSynopsis">Synopsis</label>
-            <input type="text" id="editSynopsis">
+            <input type="text" id="editSynopsis" value="${articleToEdit.synopsis}">
         </section>
     
         <section>
         <label for="editUrl">Article URL</label>
-        <input type="text" id="editUrl">
+        <input type="text" id="editUrl" value ="${articleToEdit.url}">
         </section>
-        <button id="saveEditedArticle">Save Edited Article</button>
+        <button id="confirmArticleEdit--${articleToEdit.id}">Save Edited Article</button>
         </article>
       `
   }
