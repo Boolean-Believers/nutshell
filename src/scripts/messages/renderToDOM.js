@@ -3,11 +3,14 @@
 import createForms from "./addEditMessageFormBuilder"
 
 const displayOnDOM = {
+    displayMessageMain() {
+        document.querySelector("#container").innerHTML += "<section id='messages-section'><h2>Chat Messaging</h2></section>"
+    },
     displayCreateNewMessageForm() {
-        document.querySelector("#container").innerHTML += `${createForms.createNewMessageForm()}`
+        document.querySelector("#messages-section").innerHTML += `${createForms.createNewMessageForm()}`
     },
     displayEditMessageForm(messageToEdit) {
-        document.querySelector("#container").innerHTML += `${createForms.createEditMessageForm(messageToEdit)}`
+        document.querySelector("#messages-section").innerHTML += `${createForms.createEditMessageForm(messageToEdit)}`
     }
 }
 
