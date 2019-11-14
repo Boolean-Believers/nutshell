@@ -57,10 +57,13 @@ const messageTEST = {
     renderToDom.rendertaskListHTMLBuilder(taskListTEST)
 
     const articleTest = [{
-        
+        id: 0,
+        name: "JavaScript",
+        synopsis:"Leave me alone to die.",
+        url: "http://www.alinkgoeshere.com"
     }]
 
 
 renderNewsToDom.renderNewArticleButton()
 renderNewsToDom.renderNewArticleForm()
-// renderNewsToDom.renderEditArticleForm()
+// renderNewsToDom.renderEditArticleForm(articleTest)
