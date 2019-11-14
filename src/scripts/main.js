@@ -30,8 +30,10 @@ const messageTEST = {
 
     data.getAllMessages()
     .then(messages => {
+        let messagesSection = document.querySelector("#messages-section")
         console.log(messages)
         console.log(chatMessagesManager.chatMessageArray(messages))
+        messagesSection.innerHTML += `<h2>Messages</h2> ${chatMessagesManager.chatMessageArray(messages)}`
     })
 
 

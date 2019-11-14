@@ -4,5 +4,6 @@ button {
 #messages-section {
     border: 2px black solid;
     width: 33%;
-    margin: 0 auto;
+    margin-left: 15px;
+    padding-left: 40px;
 }

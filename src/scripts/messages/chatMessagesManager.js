@@ -5,8 +5,8 @@ const chatMessagesManager = {
  buildChatMessageHTML: (message) => {
     return `
     <section id="chatMessage--${message.id}">
-    <div id="chatMessageSender--${message.user.id}">${message.user.username}</div>
-    <p>${message.message}</p>
+    <div id="chatMessageSender--${message.user.id}">Author: ${message.user.username}</div>
+    <p>Message: ${message.message}</p>
     </section>
     `
 },
