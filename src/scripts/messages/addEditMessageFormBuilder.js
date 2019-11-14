@@ -6,7 +6,7 @@ const createForms = {
         <h3>Write a New Message</h3>
         <section class="add-form form" id="newMessageForm">
         <label for="newChatMessage">New Message</label>
-        <input id="newChatMessage" type="text" default="Type your message here"></input>
+        <input id="newChatMessage" type="text" value="Type your message here"></input>
         </section>
         <button class="save-button button" id="submitNewMessage-Button">Send Message</button>
         `
@@ -18,7 +18,7 @@ const createForms = {
         <label for="editChatMessage">Edit Message</label>
         <input id="editChatMessage" type="text" value="${messageToEdit.content}"></input>
         </section>
-        <button class="edit-button button" id="submitEditedMessage-Button--${messageToEdit.id}">Save Changes</button>
+        <button class="update-button button" id="saveEditedMessage-Button--${messageToEdit.id}">Save Edits</button>
         `
     }
 }
