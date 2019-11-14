@@ -10,6 +10,9 @@ const friendsOnTheDom = {
     },
     editFriends: () => {
         return friendsDomRef.innerHTML += friendsObject.addNRemoveFriends()
+    },
+    listOfFriends: () => {
+        return friendsDomRef.innerHTML += friendsObject.createFriendsList()
     }
 }
 export default friendsOnTheDom

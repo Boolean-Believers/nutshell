@@ -10,6 +10,7 @@ import taskListForm from "./tasks/taskListHTMLBuilder.js"
 import renderToDom from "./tasks/renderToDOM.js"
 import searchFriendBuilder from "./friends/friendListHTMLBuilder.js"
 import friendsOnTheDom from "./friends/renderDomFriends"
+import friendsObject from "./friends/friendListHTMLBuilder.js"
 
 sessionStorage.setItem("currentUser",1)
 let i = sessionStorage.getItem("currentUser",1)
@@ -41,3 +42,4 @@ const messageTEST = {
     renderToDom.rendertaskListHTMLBuilder(taskListTEST)
     friendsOnTheDom.renderSearchFriend()
     friendsOnTheDom.editFriends()
+    friendsOnTheDom.listOfFriends()
