@@ -8,14 +8,20 @@ import formBuilder from "./tasks/formBuilderAndEditor.js"
 import displayOnDOM from "./messages/renderToDOM.js"
 import taskListForm from "./tasks/taskListHTMLBuilder.js"
 import renderToDom from "./tasks/renderToDOM.js"
+<<<<<<< HEAD
 import newsFormBuilder from "./news/newsFormBuilder.js"
+=======
+import formBuilderAndEditor from "./events/formBuilderAndEditor.js"
+
+console.log(formBuilderAndEditor);
+>>>>>>> cc1361b54f8e1de82de77a8b0b23849aeca1efa2
 
 sessionStorage.setItem("currentUser",1)
 let i = sessionStorage.getItem("currentUser",1)
-console.log( i)
+// console.log( i)
 
-console.log(formBuilder.addFormBuilder())
-console.log(formBuilder.newTaskButton())
+// console.log(formBuilder.addFormBuilder())
+// console.log(formBuilder.newTaskButton())
 
 // Chat Message Module
 

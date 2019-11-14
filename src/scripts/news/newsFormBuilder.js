@@ -7,7 +7,7 @@ const newsFormBuilder = {
         `;
   },
 
-  addFormBuilder() {
+  addArticleFormBuilder() {
     return `
         <article id="newArticleForm"><h1>Add New Article</h1>
         <section>
@@ -27,6 +27,28 @@ const newsFormBuilder = {
         <button id="saveArticle">Save Article</button>
         </article>
         `;
+  },
+
+  editArticleFormBuilder() {
+      return `
+      <article id="editArticleForm"><h1>Edit Article</h1>
+        <section>
+            <label for="editArticleTitle">News Article</label>
+            <input type="text" id="editArticleTitle">
+        </section>
+    
+        <section>
+            <label for="editSynopsis">Synopsis</label>
+            <input type="text" id="editSynopsis">
+        </section>
+    
+        <section>
+        <label for="editUrl">Article URL</label>
+        <input type="text" id="editUrl">
+        </section>
+        <button id="saveEditedArticle">Save Edited Article</button>
+        </article>
+      `
   }
 };
 
