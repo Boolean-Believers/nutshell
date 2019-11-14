@@ -66,4 +66,5 @@ const messageTEST = {
 
 renderNewsToDom.renderNewArticleButton()
 renderNewsToDom.renderNewArticleForm()
-// renderNewsToDom.renderEditArticleForm(articleTest)
+renderNewsToDom.renderEditArticleForm(articleTest)
+// console.log(newsFormBuilder.editArticleFormBuilder(articleTest))

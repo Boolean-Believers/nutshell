@@ -14,8 +14,8 @@ const renderNewsToDom = {
     return (domRef.innerHTML += newsFormBuilder.addArticleFormBuilder());
   },
 
-  renderEditArticleForm: () => {
-    return (domRef.innerHTML += newsFormBuilder.editArticleFormBuilder());
+  renderEditArticleForm: (articleToEdit) => {
+    return (domRef.innerHTML += newsFormBuilder.editArticleFormBuilder(articleToEdit));
   }
 };
 

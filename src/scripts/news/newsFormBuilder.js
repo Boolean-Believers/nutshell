@@ -17,7 +17,7 @@ const newsFormBuilder = {
     
         <section>
             <label for="synopsis">Synopsis</label>
-            <input type="text" id="synopsis">
+            <textarea type="text" id="synopsis" rows="4"></textarea>
         </section>
     
         <section>
@@ -46,7 +46,7 @@ const newsFormBuilder = {
         <label for="editUrl">Article URL</label>
         <input type="text" id="editUrl" value ="${articleToEdit.url}">
         </section>
-        <button id="confirmArticleEdit--${articleToEdit.id}">Save Edited Article</button>
+        <button id="--${articleToEdit.id}">Save Edited Article</button>
         </article>
       `
   }
