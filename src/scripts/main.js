@@ -7,6 +7,8 @@
 import formBuilder from "./tasks/formBuilderAndEditor.js"
 import displayOnDOM from "./messages/renderToDOM.js"
 import taskListForm from "./tasks/taskListHTMLBuilder.js"
+import chatMessagesManager from "./messages/chatMessagesManager.js"
+import data from "./messages/apiManager.js"
 import renderToDom from "./tasks/renderToDOM.js"
 import searchFriendBuilder from "./friends/friendListHTMLBuilder.js"
 import friendsOnTheDom from "./friends/renderDomFriends"
@@ -21,6 +23,7 @@ console.log(formBuilder.newTaskButton())
 
 // Chat Message Module
 
+displayOnDOM.displayMessageMain()
 displayOnDOM.displayCreateNewMessageForm()
 
 const messageTEST = {
@@ -28,6 +31,16 @@ const messageTEST = {
         id: 1
     }
     displayOnDOM.displayEditMessageForm(messageTEST)
+
+    data.getAllMessages()
+    .then(messages => {
+        let messagesSection = document.querySelector("#messages-section")
+        console.log(messages)
+        console.log(chatMessagesManager.chatMessageArray(messages))
+        messagesSection.innerHTML += `<h2>Messages</h2> ${chatMessagesManager.chatMessageArray(messages)}`
+    })
+
+
 
 
     const taskListTEST = [{
