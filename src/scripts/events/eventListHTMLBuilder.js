@@ -1,4 +1,4 @@
-const eventListHTMLBuilder = (event) =>
+const eventHTMLBuilder = (event) =>
     `
     <section id="eventID--${event.id}">
         <label for="completedTask">Mark Complete</label>
@@ -9,5 +9,14 @@ const eventListHTMLBuilder = (event) =>
         <button id="taskDeleteButton--${task.id}">DELETE</button>
     </section>
     `;
+
+const eventListHTMLBuilder = {
+    listEventsHTML(eventsArray) {
+        let eventsHTML = "";
+        eventsArray.forEach(event => eventsHTML += eventHTMLBuilder(event));
+        console.log(eventsHTML)
+        return eventsHTML;
+    }
+}
 
   export default eventListHTMLBuilder;
