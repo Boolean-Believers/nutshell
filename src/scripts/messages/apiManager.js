@@ -1,13 +1,15 @@
-baseURL = "http://localhost:8088"
+// Melody Stern
+
+const baseURL = "http://localhost:8088"
 
 const messageData = {
     getAllMessages: () => {
-        return fetch(`${baseURL}/messages`)
-        .then(messages => messages.json)
+        return fetch(`${baseURL}/messages?_expand=user`)
+        .then(messages => messages.json())
     },
     getSingleMessage: (messageToEdit) => {
         return fetch(`${baseURL}/messages/${messageToEdit.id}`)
-        .then(messages => messages.json)
+        .then(messages => messages.json())
     },
     addNewMessage: (newMessage) => {
         return fetch(`${baseURL}/messages`, {

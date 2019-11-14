@@ -7,6 +7,8 @@
 import formBuilder from "./tasks/formBuilderAndEditor.js"
 import displayOnDOM from "./messages/renderToDOM.js"
 import taskListForm from "./tasks/taskListHTMLBuilder.js"
+import chatMessagesManager from "./messages/chatMessagesManager.js"
+import data from "./messages/apiManager.js"
 
 sessionStorage.setItem("currentUser",1)
 let i = sessionStorage.getItem("currentUser",1)
@@ -26,9 +28,17 @@ const messageTEST = {
     }
     displayOnDOM.displayEditMessageForm(messageTEST)
 
+    data.getAllMessages()
+    .then(messages => {
+        console.log(messages)
+        console.log(chatMessagesManager.chatMessageArray(messages))
+    })
+
+
+
 
     const taskListTEST = {
-        taskName: "I'm a task, nice to meet you",
+        taskName: "I'm a task, nice) to meet you",
         id: 1,
         completionDate: 2099/11/10
     }
