@@ -10,16 +10,22 @@ import taskListForm from "./tasks/taskListHTMLBuilder.js"
 import chatMessagesManager from "./messages/chatMessagesManager.js"
 import data from "./messages/apiManager.js"
 import renderToDom from "./tasks/renderToDOM.js"
+<<<<<<< HEAD
 import searchFriendBuilder from "./friends/friendListHTMLBuilder.js"
 import friendsOnTheDom from "./friends/renderDomFriends"
 import friendsObject from "./friends/friendListHTMLBuilder.js"
+=======
+import formBuilderAndEditor from "./events/formBuilderAndEditor.js"
+
+console.log(formBuilderAndEditor);
+>>>>>>> origin
 
 sessionStorage.setItem("currentUser",1)
 let i = sessionStorage.getItem("currentUser",1)
-console.log( i)
+// console.log( i)
 
-console.log(formBuilder.addFormBuilder())
-console.log(formBuilder.newTaskButton())
+// console.log(formBuilder.addFormBuilder())
+// console.log(formBuilder.newTaskButton())
 
 // Chat Message Module
 
