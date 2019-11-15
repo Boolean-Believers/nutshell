@@ -78,7 +78,6 @@ eventListenerManager.addEventListenerToContainer()
 
 // ///////////////////////////////////////
 
-<<<<<<< HEAD
     const taskListTEST = [{
         taskName: "I'm a task, nice to meet you",
         id: 1,
@@ -102,18 +101,16 @@ eventListenerManager.addEventListenerToContainer()
 // renderToDom.renderNewTaskButton()
 // renderToDom.renderEditFormBuilder()
 // renderToDom.rendertaskListHTMLBuilder(taskListTEST)
-=======
-const taskListTEST = [{
-    taskName: "I'm a task, nice to meet you",
-    id: 1,
-    completionDate: "2099/11/10"
-}]
+// const taskListTEST = [{
+//     taskName: "I'm a task, nice to meet you",
+//     id: 1,
+//     completionDate: "2099/11/10"
+// }]
 // console.log(taskListForm(taskListTEST))
 renderToDom.renderNewTaskForm()
 renderToDom.renderNewTaskButton()
 renderToDom.renderEditFormBuilder()
 renderToDom.rendertaskListHTMLBuilder(taskListTEST)
->>>>>>> origin
 
 // const articleTest = [{
 //     id: 0,
@@ -123,8 +120,8 @@ renderToDom.rendertaskListHTMLBuilder(taskListTEST)
 // }]
 
 
-renderNewsToDom.renderNewArticleButton()
-renderNewsToDom.renderNewArticleForm()
+// renderNewsToDom.renderNewArticleButton()
+// renderNewsToDom.renderNewArticleForm()
 // renderNewsToDom.renderEditArticleForm(articleTest)
 // renderNewsToDom.renderNewArticleButton()
 // renderNewsToDom.renderNewArticleForm()
