@@ -10,7 +10,7 @@ const displayOnDOM = {
         document.querySelector("#messaging-section").innerHTML += `${createForms.createNewMessageForm()}`
     },
     displayEditMessageForm(messageToEdit) {
-        document.querySelector("#messaging-section").innerHTML += `${createForms.createEditMessageForm(messageToEdit)}`
+        return document.querySelector("#messaging-section").innerHTML += `${createForms.createEditMessageForm(messageToEdit)}`
     }
 }
 
