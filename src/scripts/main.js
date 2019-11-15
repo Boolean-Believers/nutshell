@@ -10,6 +10,9 @@ import taskListForm from "./tasks/taskListHTMLBuilder.js"
 import chatMessagesManager from "./messages/chatMessagesManager.js"
 import data from "./messages/apiManager.js"
 import renderToDom from "./tasks/renderToDOM.js"
+import searchFriendBuilder from "./friends/friendListHTMLBuilder.js"
+import friendsOnTheDom from "./friends/renderDomFriends"
+import friendsObject from "./friends/friendListHTMLBuilder.js"
 import newsFormBuilder from "./news/newsFormBuilder.js"
 import formBuilderAndEditor from "./events/formBuilderAndEditor.js"
 import eventListenerManager from "./messages/eventListeners.js"
@@ -76,11 +79,34 @@ eventListenerManager.addEventListenerToContainer()
 
 // ///////////////////////////////////////
 
-const taskListTEST = [{
-    taskName: "I'm a task, nice to meet you",
-    id: 1,
-    completionDate: "2099/11/10"
-}]
+    const taskListTEST = [{
+        taskName: "I'm a task, nice to meet you",
+        id: 1,
+        completionDate:"2099/11/10"
+    }]
+    // console.log(taskListForm(taskListTEST))
+    renderToDom.renderNewTaskForm()
+    renderToDom.renderNewTaskButton()
+    renderToDom.renderEditFormBuilder()
+    renderToDom.rendertaskListHTMLBuilder(taskListTEST)
+    friendsOnTheDom.renderSearchFriend()
+    friendsOnTheDom.editFriends()
+    friendsOnTheDom.listOfFriends()
+// const taskListTEST = [{
+//     taskName: "I'm a task, nice to meet you",
+//     id: 1,
+//     completionDate: "2099/11/10"
+// }]
+// // console.log(taskListForm(taskListTEST))
+// renderToDom.renderNewTaskForm()
+// renderToDom.renderNewTaskButton()
+// renderToDom.renderEditFormBuilder()
+// renderToDom.rendertaskListHTMLBuilder(taskListTEST)
+// const taskListTEST = [{
+//     taskName: "I'm a task, nice to meet you",
+//     id: 1,
+//     completionDate: "2099/11/10"
+// }]
 // console.log(taskListForm(taskListTEST))
 renderToDom.renderNewTaskForm()
 renderToDom.renderNewTaskButton()
@@ -95,9 +121,18 @@ renderToDom.rendertaskListHTMLBuilder(taskListTEST)
     }
 
 
+<<<<<<< HEAD
+// renderNewsToDom.renderNewArticleButton()
+// renderNewsToDom.renderNewArticleForm()
+// renderNewsToDom.renderEditArticleForm(articleTest)
+// renderNewsToDom.renderNewArticleButton()
+// renderNewsToDom.renderNewArticleForm()
+// // renderNewsToDom.renderEditArticleForm(articleTest)
+=======
 renderNewsToDom.renderNewArticleButton()
 renderNewsToDom.renderNewArticleForm()
 renderNewsToDom.renderEditArticleForm(articleTest)
 // console.log(newsFormBuilder.editArticleFormBuilder(articleTest))
 
 //handleAddArticleEvent()
+>>>>>>> 177d7bb31c0ae428d046bda07cc4587dec1604b7
