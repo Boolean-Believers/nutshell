@@ -3,20 +3,28 @@
     margin: 0;
     padding: 0
 }
+body {
+    font-size: 1.2em;
+}
 button {
     margin-top: 15px;
     margin-bottom: 10px;
 }
 #messages-section {
-    background-color: lightblue;
+    background-color: rgb(233, 246, 250);
     width: 100%;
+    border-radius: 2%;
+    padding: 15px;
 }
 #messaging-section {
-    margin-left: 15px;
-    border: 1px grey solid;
+    margin: 5px 0 10px 35px;
+    padding-left: 15px;
     width: 33%;
 }
 
 #messaging-section > h2 {
-    padding-bottom: 15px;
+    font-size: 1.5em;
+    padding: 15px;
+    padding-bottom: 20px;
+    background-color: rgb(243, 240, 235, .5);
 }
