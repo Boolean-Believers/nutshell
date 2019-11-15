@@ -10,13 +10,23 @@ import taskListForm from "./tasks/taskListHTMLBuilder.js"
 import chatMessagesManager from "./messages/chatMessagesManager.js"
 import data from "./messages/apiManager.js"
 import renderToDom from "./tasks/renderToDOM.js"
+import searchFriendBuilder from "./friends/friendListHTMLBuilder.js"
+import friendsOnTheDom from "./friends/renderDomFriends"
+import friendsObject from "./friends/friendListHTMLBuilder.js"
 import newsFormBuilder from "./news/newsFormBuilder.js"
 import formBuilderAndEditor from "./events/formBuilderAndEditor.js"
+import eventApiManager from "./events/apiManager.js"
 import eventListenerManager from "./messages/eventListeners.js"
 import renderNewsToDom from "./news/renderToDom.js"
+import eventListHTMLBuilder from "./events/eventListHTMLBuilder.js"
 import handleAddArticleEvent from "./news/eventListeners.js"
 
-console.log(formBuilderAndEditor);
+
+// eventApiManager.then(response => {
+//     const memeListRef = document.querySelector(".meme-list")
+//     memeListRef.innerHTML = memeBuilder.listMemesHtml(response)
+//   })
+// eventListHTMLBuilder.listEventsHTML(eventApiManager.getAllEvents);
 
 sessionStorage.setItem("currentUser", 1)
 let i = sessionStorage.getItem("currentUser", 1)
@@ -76,11 +86,34 @@ eventListenerManager.addEventListenerToContainer()
 
 // ///////////////////////////////////////
 
-const taskListTEST = [{
-    taskName: "I'm a task, nice to meet you",
-    id: 1,
-    completionDate: "2099/11/10"
-}]
+    const taskListTEST = [{
+        taskName: "I'm a task, nice to meet you",
+        id: 1,
+        completionDate:"2099/11/10"
+    }]
+    // console.log(taskListForm(taskListTEST))
+    renderToDom.renderNewTaskForm()
+    renderToDom.renderNewTaskButton()
+    renderToDom.renderEditFormBuilder()
+    renderToDom.rendertaskListHTMLBuilder(taskListTEST)
+    friendsOnTheDom.renderSearchFriend()
+    friendsOnTheDom.editFriends()
+    friendsOnTheDom.listOfFriends()
+// const taskListTEST = [{
+//     taskName: "I'm a task, nice to meet you",
+//     id: 1,
+//     completionDate: "2099/11/10"
+// }]
+// // console.log(taskListForm(taskListTEST))
+// renderToDom.renderNewTaskForm()
+// renderToDom.renderNewTaskButton()
+// renderToDom.renderEditFormBuilder()
+// renderToDom.rendertaskListHTMLBuilder(taskListTEST)
+// const taskListTEST = [{
+//     taskName: "I'm a task, nice to meet you",
+//     id: 1,
+//     completionDate: "2099/11/10"
+// }]
 // console.log(taskListForm(taskListTEST))
 renderToDom.renderNewTaskForm()
 renderToDom.renderNewTaskButton()
@@ -94,6 +127,21 @@ renderToDom.rendertaskListHTMLBuilder(taskListTEST)
         url: "http://www.alinkgoeshere.com"
     }
 
+
+
+
+/*
+
+Event list reference
+
+*/
+
+eventApiManager.getAllEvents()
+    .then(events => {
+        const eventListRef = document.querySelector("#events-container");
+        eventListRef.innerHTML = eventListHTMLBuilder.listEventsHTML(events);
+
+    })
 
 renderNewsToDom.renderNewArticleButton()
 renderNewsToDom.renderNewArticleForm()
