@@ -13,12 +13,6 @@ const chatMessagesManager = {
     `
     },
     chatMessageArray: (messages) => {
-        messages.sort(function(a,b){
-            // Turn your strings into dates, and then subtract them
-            // to get a value that is either negative, positive, or zero.
-            return new Date(b.date) - new Date(a.date);
-          });
-    })
         let messagesHTML = ""
         for (let message of messages) {
             messagesHTML += chatMessagesManager.buildChatMessageHTML(message)
