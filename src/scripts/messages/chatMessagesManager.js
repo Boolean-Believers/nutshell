@@ -2,6 +2,7 @@
 // Builds html for each chat message to display on the DOM and iterates through the results array, plugging each message into the single chat message html builder function
 
 const chatMessagesManager = {
+    
     buildChatMessageHTML: (message) => {
         return `
     <section id="chatMessage--${message.id}">
@@ -12,6 +13,12 @@ const chatMessagesManager = {
     `
     },
     chatMessageArray: (messages) => {
+        messages.sort(function(a,b){
+            // Turn your strings into dates, and then subtract them
+            // to get a value that is either negative, positive, or zero.
+            return new Date(b.date) - new Date(a.date);
+          });
+    })
         let messagesHTML = ""
         for (let message of messages) {
             messagesHTML += chatMessagesManager.buildChatMessageHTML(message)
