@@ -18,7 +18,11 @@ import renderNewsToDom from "./news/renderToDom.js"
 import eventListHTMLBuilder from "./events/eventListHTMLBuilder.js"
 
 
-eventListHTMLBuilder.listEventsHTML(eventApiManager.getAllEvents);
+// eventApiManager.then(response => {
+//     const memeListRef = document.querySelector(".meme-list")
+//     memeListRef.innerHTML = memeBuilder.listMemesHtml(response)
+//   })
+// eventListHTMLBuilder.listEventsHTML(eventApiManager.getAllEvents);
 
 sessionStorage.setItem("currentUser", 1)
 let i = sessionStorage.getItem("currentUser", 1)
@@ -100,3 +104,16 @@ eventListenerManager.addEventListenerToContainer()
 // renderNewsToDom.renderNewArticleButton()
 // renderNewsToDom.renderNewArticleForm()
 // // renderNewsToDom.renderEditArticleForm(articleTest)
+
+/*
+
+Event list reference
+
+*/
+
+eventApiManager.getAllEvents()
+    .then(events => {
+        const eventListRef = document.querySelector("#events-container");
+        eventListRef.innerHTML = eventListHTMLBuilder.listEventsHTML(events);
+
+    })
