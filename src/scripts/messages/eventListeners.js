@@ -52,6 +52,12 @@ const eventListenerManager = {
                 }
                 console.log(editedInfo)
                 data.updateMessage(editedInfo)
+                .then(data.getAllMessages)
+                .then(messages => {
+                    const messagesContainer = document.querySelector("#messages-section")
+                    messagesContainer .innerHTML +=  chatMessagesManager.chatMessageArray(messages)
+
+                })
             }
         })
     }
