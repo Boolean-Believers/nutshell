@@ -17,7 +17,7 @@ import renderNewsToDom from "./news/renderToDom.js"
 import eventListHTMLBuilder from "./events/eventListHTMLBuilder.js"
 
 
-console.log(eventListHTMLBuilder);
+eventListHTMLBuilder.listEventsHTML(eventApiManager.getAllEvents);
 
 sessionStorage.setItem("currentUser",1)
 let i = sessionStorage.getItem("currentUser",1)
