@@ -8,6 +8,22 @@ body {
     color: rgb(4, 39, 39);
     font-family: Helvetica, Arial, sans-serif;
 }
+#container {
+    display: flex;
+}
+#container > div {
+    margin: 10px;
+    border: 4px rgb(27, 22, 56) solid;
+    padding: 5px;
+    flex-wrap: wrap;
+    width: 33%;
+}
+#main-heading-container {
+    display: block;
+    width: 100%;
+    padding: 80px;
+    border: pink;
+}
 button {
     margin-top: 15px;
     margin-bottom: 10px;
@@ -15,11 +31,6 @@ button {
     background-color: rgba(211, 153, 45, 0.76);
     padding: 8px;
     font-size: .8em;
-}
-#messaging-section {
-    margin: 5px 0 10px 35px;
-    padding: 15px 0 15px 5px;
-    width: 33%;
 }
 #messaging-section h3 {
     font-size: 1.3em;

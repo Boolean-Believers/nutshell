@@ -4,7 +4,7 @@ import createForms from "./addEditMessageFormBuilder"
 
 const displayOnDOM = {
     displayMessageMain() {
-        document.querySelector("#container").innerHTML += "<section id='messaging-section'><h1>Chat Messaging</h1></section>"
+        document.querySelector("#messaging-container").innerHTML += "<section id='messaging-section'><h1>Chat Messaging</h1></section>"
     },
     displayCreateNewMessageForm() {
         document.querySelector("#messaging-section").innerHTML += `${createForms.createNewMessageForm()}`

@@ -24,6 +24,36 @@ let i = sessionStorage.getItem("currentUser", 1)
 // console.log(formBuilder.addFormBuilder())
 // console.log(formBuilder.newTaskButton())
 
+//////////////////////////////////////////
+
+// Page containers setup
+
+const mainContainer = document.querySelector("#container")
+const mainHeadingContainer = document.createElement("div")
+mainHeadingContainer.id = "main-heading-container"
+const messagingContainer = document.createElement("div")
+messagingContainer.id = "messaging-container"
+const eventsContainer = document.createElement("div")
+eventsContainer.id = "events-container"
+const friendsContainer = document.createElement("div")
+friendsContainer.id = "friends-container"
+const newsContainer = document.createElement("div")
+newsContainer.id = "news-container"
+const tasksContainer = document.createElement("div")
+tasksContainer.id = "tasks-container"
+const loginContainer = document.createElement("div")
+loginContainer.id = "login-container"
+
+// Add containers to DOM
+
+mainContainer.appendChild(mainHeadingContainer)
+mainContainer.appendChild(messagingContainer)
+mainContainer.appendChild(eventsContainer)
+mainContainer.appendChild(friendsContainer)
+mainContainer.appendChild(newsContainer)
+mainContainer.appendChild(tasksContainer)
+mainContainer.appendChild(loginContainer)
+
 /////////////////////////////////////////
 
 // Chat Message Module
@@ -36,33 +66,34 @@ data.getAllMessages()
         console.log(messages)
         console.log(chatMessagesManager.chatMessageArray(messages))
         messagingSection.innerHTML += `<section id="messages-section"><h2>Messages</h2> ${chatMessagesManager.chatMessageArray(messages)}</section>`
+        messagingContainer.appendChild(messagingSection)
     })
 
 eventListenerManager.addEventListenerToContainer()
 
 
 
-///////////////////////////////////////
+// ///////////////////////////////////////
 
-const taskListTEST = [{
-    taskName: "I'm a task, nice to meet you",
-    id: 1,
-    completionDate: "2099/11/10"
-}]
-// console.log(taskListForm(taskListTEST))
-renderToDom.renderNewTaskForm()
-renderToDom.renderNewTaskButton()
-renderToDom.renderEditFormBuilder()
-renderToDom.rendertaskListHTMLBuilder(taskListTEST)
+// const taskListTEST = [{
+//     taskName: "I'm a task, nice to meet you",
+//     id: 1,
+//     completionDate: "2099/11/10"
+// }]
+// // console.log(taskListForm(taskListTEST))
+// renderToDom.renderNewTaskForm()
+// renderToDom.renderNewTaskButton()
+// renderToDom.renderEditFormBuilder()
+// renderToDom.rendertaskListHTMLBuilder(taskListTEST)
 
-const articleTest = [{
-    id: 0,
-    name: "JavaScript",
-    synopsis: "Leave me alone to die.",
-    url: "http://www.alinkgoeshere.com"
-}]
+// const articleTest = [{
+//     id: 0,
+//     name: "JavaScript",
+//     synopsis: "Leave me alone to die.",
+//     url: "http://www.alinkgoeshere.com"
+// }]
 
 
-renderNewsToDom.renderNewArticleButton()
-renderNewsToDom.renderNewArticleForm()
-// renderNewsToDom.renderEditArticleForm(articleTest)
+// renderNewsToDom.renderNewArticleButton()
+// renderNewsToDom.renderNewArticleForm()
+// // renderNewsToDom.renderEditArticleForm(articleTest)
