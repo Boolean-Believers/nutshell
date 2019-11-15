@@ -12,17 +12,17 @@ const newsFormBuilder = {
         <article id="newArticleForm"><h1>Add New Article</h1>
         <section>
             <label for="articleTitle">News Article</label>
-            <input type="text" id="articleTitle">
+            <input type="text" id="articleTitle-input">
         </section>
     
         <section>
             <label for="synopsis">Synopsis</label>
-            <input type="text" id="synopsis">
+            <textarea type="text" id="synopsis-input" rows="4"></textarea>
         </section>
     
         <section>
         <label for="url">Article URL</label>
-        <input type="text" id="url">
+        <input type="text" id="url-input">
         </section>
         <button id="saveArticle">Save Article</button>
         </article>
@@ -46,10 +46,13 @@ const newsFormBuilder = {
         <label for="editUrl">Article URL</label>
         <input type="text" id="editUrl" value ="${articleToEdit.url}">
         </section>
-        <button id="confirmArticleEdit--${articleToEdit.id}">Save Edited Article</button>
+        <button id="saveEditedArticle--${articleToEdit.id}">Save Edited Article</button>
         </article>
+        <article class="article-list"></article>
       `
   }
+
+
 };
 
 export default newsFormBuilder

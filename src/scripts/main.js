@@ -16,6 +16,7 @@ import eventApiManager from "./events/apiManager.js"
 import eventListenerManager from "./messages/eventListeners.js"
 import renderNewsToDom from "./news/renderToDom.js"
 import eventListHTMLBuilder from "./events/eventListHTMLBuilder.js"
+import handleAddArticleEvent from "./news/eventListeners.js"
 
 
 // eventApiManager.then(response => {
@@ -93,12 +94,12 @@ renderToDom.renderNewTaskButton()
 renderToDom.renderEditFormBuilder()
 renderToDom.rendertaskListHTMLBuilder(taskListTEST)
 
-// const articleTest = [{
-//     id: 0,
-//     name: "JavaScript",
-//     synopsis: "Leave me alone to die.",
-//     url: "http://www.alinkgoeshere.com"
-// }]
+    const articleTest = {
+        id: 0,
+        name: "JavaScript",
+        synopsis:"Leave me alone to die.",
+        url: "http://www.alinkgoeshere.com"
+    }
 
 
 // renderNewsToDom.renderNewArticleButton()
@@ -117,3 +118,9 @@ eventApiManager.getAllEvents()
         eventListRef.innerHTML = eventListHTMLBuilder.listEventsHTML(events);
 
     })
+renderNewsToDom.renderNewArticleButton()
+renderNewsToDom.renderNewArticleForm()
+renderNewsToDom.renderEditArticleForm(articleTest)
+// console.log(newsFormBuilder.editArticleFormBuilder(articleTest))
+
+//handleAddArticleEvent()
