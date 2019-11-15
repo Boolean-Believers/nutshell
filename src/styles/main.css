@@ -1,9 +1,77 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+body {
+    font-size: 1.2em;
+    color: rgb(4, 39, 39);
+    font-family: Helvetica, Arial, sans-serif;
+}
+#container {
+    display: flex;
+}
+#container > div {
+    margin: 10px;
+    border: 4px rgb(27, 22, 56) solid;
+    padding: 5px;
+    flex-wrap: wrap;
+    width: 33%;
+}
+#main-heading-container {
+    display: block;
+    width: 100%;
+    padding: 80px;
+    border: pink;
+}
 button {
     margin-top: 15px;
+    margin-bottom: 10px;
+    color: white;
+    background-color: rgba(211, 153, 45, 0.76);
+    padding: 8px;
+    font-size: .8em;
+}
+#messaging-section h3 {
+    font-size: 1.3em;
+    padding: 15px 0 15px 5px;
+    padding-bottom: 10px;
+}
+#messaging-section h1 {
+    background-color: rgb(243, 240, 235, .5);
+    padding: 15px 0 15px 5px;
+    padding-bottom: 30px;
+    font-size: 1.6em
+}
+#add-form-container {
+    background-color: rgba(87, 221, 203, 0.308);
+    border-radius: 2%;
+    margin-bottom: 8px;
 }
 #messages-section {
-    border: 2px black solid;
-    width: 33%;
-    margin-left: 15px;
-    padding-left: 40px;
+    background-color: rgba(9, 7, 14, 0.24);
+    border-radius: 2%;
+    width: 100%;
+    padding: 15px 15px 15px 5px;
+    max-height: 400px;
+    overflow-y: hidden;
+}
+#messages-section > h2 {
+    padding-bottom: 15px;
+    font-size: 1.3em;
+}
+#messaging-section label { 
+    padding-top: 100px;
+}
+#messaging-section input {
+    padding: 25px;
+    margin: 8px;
+}
+input {
+    padding: 2px;
+    margin: 8px;
+}
+label {
+    padding-left: 
+        10px;
 }
