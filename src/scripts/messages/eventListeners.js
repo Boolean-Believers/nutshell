@@ -1,5 +1,6 @@
-import data from "./apiManager"
-import chatMessagesManager from "./chatMessagesManager"
+import data from "./apiManager.js"
+import chatMessagesManager from "./chatMessagesManager.js"
+import displayOnDOM from "./renderToDOM.js"
 
 const sendNewMessageButton = document.querySelector("#submitNewMessage-button")
 const editMessageButton = document.querySelector("#editMessage-button")
@@ -33,6 +34,10 @@ const eventListenerManager = {
                 }
                 console.log(post)
                 eventListenerManager.sendMessage(post)
+            } else if (event.target.id.startsWith("editMessage-button")) {
+                const id = event.target.id.split("--")[1]
+                data.getSingleMessage(id)
+                .then(messageToEdit => displayOnDOM.displayEditMessageForm(messageToEdit))
             }
         })
     }

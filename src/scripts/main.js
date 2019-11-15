@@ -31,12 +31,6 @@ let i = sessionStorage.getItem("currentUser", 1)
 displayOnDOM.displayMessageMain()
 displayOnDOM.displayCreateNewMessageForm()
 
-const messageTEST = {
-    content: "Here's some dummy text",
-    id: 1
-}
-displayOnDOM.displayEditMessageForm(messageTEST)
-
 data.getAllMessages()
     .then(messages => {
         let messagingSection = document.querySelector("#messaging-section")
