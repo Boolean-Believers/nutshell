@@ -75,6 +75,10 @@ data.getAllMessages()
     .then(messages => {
         let messagingSection = document.querySelector("#messaging-section")
         console.log(messages)
+        const sortedMessages = messages.sort((a, b) => {
+            return a.timestamp - b.timestamp
+        })
+        console.log(sortedMessages)
         console.log(chatMessagesManager.chatMessageArray(messages))
         messagingSection.innerHTML += `<section id="messages-section"><h2>Messages</h2> ${chatMessagesManager.chatMessageArray(messages)}</section>`
         messagingContainer.appendChild(messagingSection)
@@ -91,30 +95,12 @@ eventListenerManager.addEventListenerToContainer()
         id: 1,
         completionDate:"2099/11/10"
     }]
-    // console.log(taskListForm(taskListTEST))
-    renderToDom.renderNewTaskForm()
-    renderToDom.renderNewTaskButton()
-    renderToDom.renderEditFormBuilder()
-    renderToDom.rendertaskListHTMLBuilder(taskListTEST)
+
+   
     friendsOnTheDom.renderSearchFriend()
     friendsOnTheDom.editFriends()
     friendsOnTheDom.listOfFriends()
-// const taskListTEST = [{
-//     taskName: "I'm a task, nice to meet you",
-//     id: 1,
-//     completionDate: "2099/11/10"
-// }]
-// // console.log(taskListForm(taskListTEST))
-// renderToDom.renderNewTaskForm()
-// renderToDom.renderNewTaskButton()
-// renderToDom.renderEditFormBuilder()
-// renderToDom.rendertaskListHTMLBuilder(taskListTEST)
-// const taskListTEST = [{
-//     taskName: "I'm a task, nice to meet you",
-//     id: 1,
-//     completionDate: "2099/11/10"
-// }]
-// console.log(taskListForm(taskListTEST))
+
 renderToDom.renderNewTaskForm()
 renderToDom.renderNewTaskButton()
 renderToDom.renderEditFormBuilder()

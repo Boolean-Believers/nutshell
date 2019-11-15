@@ -49,12 +49,11 @@ button {
     margin-bottom: 8px;
 }
 #messages-section {
-    background-color: rgba(9, 7, 14, 0.24);
     border-radius: 2%;
     width: 100%;
     padding: 15px 15px 15px 5px;
     max-height: 400px;
-    overflow-y: hidden;
+    overflow-y: scroll;
 }
 #messages-section > h2 {
     padding-bottom: 15px;

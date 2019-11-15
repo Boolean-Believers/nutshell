@@ -2,6 +2,7 @@
 // Builds html for each chat message to display on the DOM and iterates through the results array, plugging each message into the single chat message html builder function
 
 const chatMessagesManager = {
+    
     buildChatMessageHTML: (message) => {
         return `
     <section id="chatMessage--${message.id}">
