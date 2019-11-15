@@ -13,11 +13,9 @@ const chatMessagesManager = {
     },
     chatMessageArray: (messages) => {
         let messagesHTML = ""
-        console.log("This is what we're trying to figure out", messages)
         for (let message of messages) {
             messagesHTML += chatMessagesManager.buildChatMessageHTML(message)
         }
-        console.log(messagesHTML)
         return messagesHTML
     }
 }

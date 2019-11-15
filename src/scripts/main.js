@@ -24,6 +24,8 @@ let i = sessionStorage.getItem("currentUser", 1)
 // console.log(formBuilder.addFormBuilder())
 // console.log(formBuilder.newTaskButton())
 
+/////////////////////////////////////////
+
 // Chat Message Module
 
 displayOnDOM.displayMessageMain()
@@ -46,6 +48,8 @@ data.getAllMessages()
     eventListenerManager.addEventListenerToContainer()
 
 
+
+    ///////////////////////////////////////
 
     const taskListTEST = [{
         taskName: "I'm a task, nice to meet you",
