@@ -1,3 +1,10 @@
+/*
+
+This module makes the list of events that will display on the DOM
+
+*/
+
+//HTML "template" for each event
 const eventHTMLBuilder = (event) =>
     `
     <section id="eventID--${event.id}">
@@ -10,6 +17,7 @@ const eventHTMLBuilder = (event) =>
     </section>
     `;
 
+    //Loop through each event, run the indivdual HTML builder, and add to the event list
 const eventListHTMLBuilder = {
     listEventsHTML(eventsArray) {
         let eventsHTML = "";

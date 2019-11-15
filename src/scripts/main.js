@@ -14,8 +14,10 @@ import newsFormBuilder from "./news/newsFormBuilder.js"
 import formBuilderAndEditor from "./events/formBuilderAndEditor.js"
 import eventApiManager from "./events/apiManager.js"
 import renderNewsToDom from "./news/renderToDom.js"
+import eventListHTMLBuilder from "./events/eventListHTMLBuilder.js"
 
-// eventApiManager.getAllEvents();
+
+console.log(eventListHTMLBuilder);
 
 sessionStorage.setItem("currentUser",1)
 let i = sessionStorage.getItem("currentUser",1)
