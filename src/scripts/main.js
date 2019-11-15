@@ -13,6 +13,7 @@ import renderToDom from "./tasks/renderToDOM.js"
 import newsFormBuilder from "./news/newsFormBuilder.js"
 import formBuilderAndEditor from "./events/formBuilderAndEditor.js"
 import renderNewsToDom from "./news/renderToDom.js"
+import handleAddArticleEvent from "./news/eventListeners.js"
 
 console.log(formBuilderAndEditor);
 
@@ -68,3 +69,5 @@ renderNewsToDom.renderNewArticleButton()
 renderNewsToDom.renderNewArticleForm()
 renderNewsToDom.renderEditArticleForm(articleTest)
 // console.log(newsFormBuilder.editArticleFormBuilder(articleTest))
+
+handleAddArticleEvent()

@@ -2,7 +2,7 @@ const baseUrl = "http://localhost:8088";
 
 export default {
   postArticle: article =>
-    fetch(`${baseUrl}/article`, {
+    fetch(`${baseUrl}/articles`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

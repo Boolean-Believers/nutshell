@@ -11,4 +11,4 @@ const articlesHTMLBuilder = (article) =>
     </section>
     `;
 
-  export default eventListHTMLBuilder;
+  export default articlesHTMLBuilder;
