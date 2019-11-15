@@ -4,6 +4,7 @@ const fetchFriendsData = {
     gettingMyBuddies: () => {
         return fetch(`${baseUrl}/friends/?_embed=users`)
         .then(friends => friends.json())
+                
     }
 }
 
