@@ -75,16 +75,16 @@ eventListenerManager.addEventListenerToContainer()
 
 // ///////////////////////////////////////
 
-// const taskListTEST = [{
-//     taskName: "I'm a task, nice to meet you",
-//     id: 1,
-//     completionDate: "2099/11/10"
-// }]
-// // console.log(taskListForm(taskListTEST))
-// renderToDom.renderNewTaskForm()
-// renderToDom.renderNewTaskButton()
-// renderToDom.renderEditFormBuilder()
-// renderToDom.rendertaskListHTMLBuilder(taskListTEST)
+const taskListTEST = [{
+    taskName: "I'm a task, nice to meet you",
+    id: 1,
+    completionDate: "2099/11/10"
+}]
+// console.log(taskListForm(taskListTEST))
+renderToDom.renderNewTaskForm()
+renderToDom.renderNewTaskButton()
+renderToDom.renderEditFormBuilder()
+renderToDom.rendertaskListHTMLBuilder(taskListTEST)
 
 // const articleTest = [{
 //     id: 0,

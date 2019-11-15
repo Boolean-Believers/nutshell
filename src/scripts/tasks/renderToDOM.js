@@ -1,7 +1,7 @@
 import formBuilder from "./formBuilderAndEditor.js"
 import taskListHTMLBuilder from "./taskListHTMLBuilder.js"
 
-const domRef = document.getElementById("container")
+const domRef = document.getElementById("tasks-container")
 
 const renderToDom = {
      renderNewTaskForm: () => {
