@@ -53,7 +53,7 @@ button {
     width: 100%;
     padding: 15px 15px 15px 5px;
     max-height: 400px;
-    overflow-y: hidden;
+    overflow-y: scroll;
 }
 #messages-section > h2 {
     padding-bottom: 15px;
