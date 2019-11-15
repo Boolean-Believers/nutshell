@@ -12,6 +12,7 @@ const messageData = {
         .then(messages => messages.json())
     },
     addNewMessage: (newMessage) => {
+        console.log(newMessage)
         return fetch(`${baseURL}/messages`, {
             method: "POST",
             headers: {

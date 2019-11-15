@@ -10,8 +10,10 @@ import taskListForm from "./tasks/taskListHTMLBuilder.js"
 import chatMessagesManager from "./messages/chatMessagesManager.js"
 import data from "./messages/apiManager.js"
 import renderToDom from "./tasks/renderToDOM.js"
+import newsFormBuilder from "./news/newsFormBuilder.js"
 import formBuilderAndEditor from "./events/formBuilderAndEditor.js"
 import eventListenerManager from "./messages/eventListeners.js"
+import renderNewsToDom from "./news/renderToDom.js"
 
 console.log(formBuilderAndEditor);
 
@@ -41,16 +43,29 @@ data.getAllMessages()
         messagingSection.innerHTML += `<section id="messages-section"><h2>Messages</h2> ${chatMessagesManager.chatMessageArray(messages)}</section>`
     })
 
-    eventListenerManager.addEventListenerToNewMessageContainer()
+    eventListenerManager.addEventListenerToContainer()
 
 
-const taskListTEST = [{
-    taskName: "I'm a task, nice to meet you",
-    id: 1,
-    completionDate: "2099/11/10"
-}]
-// console.log(taskListForm(taskListTEST))
-renderToDom.renderNewTaskForm()
-renderToDom.renderNewTaskButton()
-renderToDom.renderEditFormBuilder()
-renderToDom.rendertaskListHTMLBuilder(taskListTEST)
+
+    const taskListTEST = [{
+        taskName: "I'm a task, nice to meet you",
+        id: 1,
+        completionDate:"2099/11/10"
+    }]
+    // console.log(taskListForm(taskListTEST))
+    renderToDom.renderNewTaskForm()
+    renderToDom.renderNewTaskButton()
+    renderToDom.renderEditFormBuilder()
+    renderToDom.rendertaskListHTMLBuilder(taskListTEST)
+
+    const articleTest = [{
+        id: 0,
+        name: "JavaScript",
+        synopsis:"Leave me alone to die.",
+        url: "http://www.alinkgoeshere.com"
+    }]
+
+
+renderNewsToDom.renderNewArticleButton()
+renderNewsToDom.renderNewArticleForm()
+// renderNewsToDom.renderEditArticleForm(articleTest)

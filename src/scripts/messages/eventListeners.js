@@ -1,4 +1,5 @@
 import data from "./apiManager"
+import chatMessagesManager from "./chatMessagesManager"
 
 const sendNewMessageButton = document.querySelector("#submitNewMessage-button")
 const editMessageButton = document.querySelector("#editMessage-button")
@@ -15,17 +16,26 @@ const eventListenerManager = {
             messagesSection.innerHTML += `${chatMessagesManager.chatMessageArray(messages)}`
         })
     },
-        addEventListenerToNewMessageContainer: () => {
-            const messagingContainer = document.querySelector("#messaging-section")
+        addEventListenerToContainer: () => {
+            const container = document.querySelector("#container")
             const newChatMessageInput = document.querySelector("#newChatMessage")
-            console.log(newChatMessageInput.value)
-            console.log(messagingContainer)
-            messagingContainer.addEventListener("click", (event) => {
+            // console.log(newChatMessageInput.value)
+            // console.log(container)
+            const message = newChatMessageInput.value
+            const timestamp = + new Date()
+            console.log(timestamp)
+            
+            const post = {
+                "message": message,
+                "userId": 1,
+                "timestamp": timestamp,
+            }
 
+            container.addEventListener("click", (event) => {
                 console.log("hello")
-                // console.log(newChatMessageInput.value)
+                console.log(post)
+                eventListenerManager.sendMessage(post)
             })
-            // sendMessage(newChatMessageInput.value))
         }
     }
 
