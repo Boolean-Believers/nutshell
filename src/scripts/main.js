@@ -96,4 +96,4 @@ renderToDom.rendertaskListHTMLBuilder(taskListTEST)
 
 // renderNewsToDom.renderNewArticleButton()
 // renderNewsToDom.renderNewArticleForm()
-// // renderNewsToDom.renderEditArticleForm(articleTest)
+ renderNewsToDom.renderEditArticleForm(articleTest)
