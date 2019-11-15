@@ -7,8 +7,8 @@ const messageData = {
         return fetch(`${baseURL}/messages?_expand=user`)
         .then(messages => messages.json())
     },
-    getSingleMessage: (messageToEdit) => {
-        return fetch(`${baseURL}/messages/${messageToEdit.id}`)
+    getSingleMessage: (messageToEditId) => {
+        return fetch(`${baseURL}/messages/${messageToEditId}`)
         .then(messages => messages.json())
     },
     addNewMessage: (newMessage) => {
