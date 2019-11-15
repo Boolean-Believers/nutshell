@@ -15,11 +15,18 @@ import friendsOnTheDom from "./friends/renderDomFriends"
 import friendsObject from "./friends/friendListHTMLBuilder.js"
 import newsFormBuilder from "./news/newsFormBuilder.js"
 import formBuilderAndEditor from "./events/formBuilderAndEditor.js"
+import eventApiManager from "./events/apiManager.js"
 import eventListenerManager from "./messages/eventListeners.js"
 import renderNewsToDom from "./news/renderToDom.js"
+import eventListHTMLBuilder from "./events/eventListHTMLBuilder.js"
 import handleAddArticleEvent from "./news/eventListeners.js"
 
-console.log(formBuilderAndEditor);
+
+// eventApiManager.then(response => {
+//     const memeListRef = document.querySelector(".meme-list")
+//     memeListRef.innerHTML = memeBuilder.listMemesHtml(response)
+//   })
+// eventListHTMLBuilder.listEventsHTML(eventApiManager.getAllEvents);
 
 sessionStorage.setItem("currentUser", 1)
 let i = sessionStorage.getItem("currentUser", 1)
@@ -121,18 +128,24 @@ renderToDom.rendertaskListHTMLBuilder(taskListTEST)
     }
 
 
-<<<<<<< HEAD
-// renderNewsToDom.renderNewArticleButton()
-// renderNewsToDom.renderNewArticleForm()
-// renderNewsToDom.renderEditArticleForm(articleTest)
-// renderNewsToDom.renderNewArticleButton()
-// renderNewsToDom.renderNewArticleForm()
-// // renderNewsToDom.renderEditArticleForm(articleTest)
-=======
+
+
+/*
+
+Event list reference
+
+*/
+
+eventApiManager.getAllEvents()
+    .then(events => {
+        const eventListRef = document.querySelector("#events-container");
+        eventListRef.innerHTML = eventListHTMLBuilder.listEventsHTML(events);
+
+    })
+
 renderNewsToDom.renderNewArticleButton()
 renderNewsToDom.renderNewArticleForm()
 renderNewsToDom.renderEditArticleForm(articleTest)
 // console.log(newsFormBuilder.editArticleFormBuilder(articleTest))
 
 //handleAddArticleEvent()
->>>>>>> 177d7bb31c0ae428d046bda07cc4587dec1604b7
