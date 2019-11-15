@@ -14,6 +14,8 @@ button {
 #messages-section {
     width: 100%;
     padding: 15px;
+    max-height: 400px;
+    overflow-y: hidden;
 }
 #messaging-section {
     margin: 5px 0 10px 35px;
