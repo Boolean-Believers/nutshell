@@ -30,8 +30,7 @@ Nutshell is a dashboard for people to use to organize their daily tasks, events,
 
 ## Database Relationships
 
-/Users/clb/Pictures/Photos Library.photoslibrary/resources/proxies/derivatives/00/00/2/UNADJUSTEDNONRAW_thumb_2.jpg
-
+![image](https://user-images.githubusercontent.com/54753720/68972834-4fa4e080-07b2-11ea-8813-2e1bf52ad5de.png)
 
 
 
