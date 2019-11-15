@@ -30,7 +30,6 @@ let i = sessionStorage.getItem("currentUser", 1)
 
 displayOnDOM.displayMessageMain()
 displayOnDOM.displayCreateNewMessageForm()
-
 data.getAllMessages()
     .then(messages => {
         let messagingSection = document.querySelector("#messaging-section")
@@ -39,29 +38,29 @@ data.getAllMessages()
         messagingSection.innerHTML += `<section id="messages-section"><h2>Messages</h2> ${chatMessagesManager.chatMessageArray(messages)}</section>`
     })
 
-    eventListenerManager.addEventListenerToContainer()
+eventListenerManager.addEventListenerToContainer()
 
 
 
-    ///////////////////////////////////////
+///////////////////////////////////////
 
-    const taskListTEST = [{
-        taskName: "I'm a task, nice to meet you",
-        id: 1,
-        completionDate:"2099/11/10"
-    }]
-    // console.log(taskListForm(taskListTEST))
-    renderToDom.renderNewTaskForm()
-    renderToDom.renderNewTaskButton()
-    renderToDom.renderEditFormBuilder()
-    renderToDom.rendertaskListHTMLBuilder(taskListTEST)
+const taskListTEST = [{
+    taskName: "I'm a task, nice to meet you",
+    id: 1,
+    completionDate: "2099/11/10"
+}]
+// console.log(taskListForm(taskListTEST))
+renderToDom.renderNewTaskForm()
+renderToDom.renderNewTaskButton()
+renderToDom.renderEditFormBuilder()
+renderToDom.rendertaskListHTMLBuilder(taskListTEST)
 
-    const articleTest = [{
-        id: 0,
-        name: "JavaScript",
-        synopsis:"Leave me alone to die.",
-        url: "http://www.alinkgoeshere.com"
-    }]
+const articleTest = [{
+    id: 0,
+    name: "JavaScript",
+    synopsis: "Leave me alone to die.",
+    url: "http://www.alinkgoeshere.com"
+}]
 
 
 renderNewsToDom.renderNewArticleButton()
