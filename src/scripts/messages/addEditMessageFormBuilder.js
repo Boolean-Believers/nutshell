@@ -16,7 +16,9 @@ const createForms = {
         <h3>Edit Your Message</h3>
         <section class="edit-form form" id="editMessageForm">
             <label for="editChatMessage">Edit Message</label>
-            <input id="editChatMessage" type="text" value="${messageToEdit.message}"></input>
+            <input id="editChatMessageTimestamp--${messageToEdit.id}" type="text" value="${messageToEdit.timestamp}" hidden></input>
+            <input id="editChatMessageSender--${messageToEdit.id}" type="text" value="${messageToEdit.userId}" hidden></input>
+            <input id="editChatMessage--${messageToEdit.id}" type="text" value="${messageToEdit.message}"></input>
         </section>
         <button class="update-button button" id="saveEditedMessage-button--${messageToEdit.id}">Save Edits</button>
         `

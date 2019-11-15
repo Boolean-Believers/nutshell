@@ -38,6 +38,20 @@ const eventListenerManager = {
                 const id = event.target.id.split("--")[1]
                 data.getSingleMessage(id)
                 .then(messageToEdit => displayOnDOM.displayEditMessageForm(messageToEdit))
+            } else if (event.target.id.startsWith("saveEditedMessage-button")) {
+                const id = event.target.id.split("--")[1]
+                console.log(id)
+                const message = document.querySelector(`#editChatMessage--${id}`).value
+                const userId = document.querySelector(`#editChatMessageSender--${id}`).value
+                const timestamp = document.querySelector(`#editChatMessageTimestamp--${id}`).value
+                const editedInfo = {
+                    "id": id,
+                    "message": message,
+                    "userId": userId,
+                    "timestamp": timestamp,
+                }
+                console.log(editedInfo)
+                data.updateMessage(editedInfo)
             }
         })
     }
