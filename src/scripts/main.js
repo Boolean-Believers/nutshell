@@ -17,6 +17,7 @@ import newsFormBuilder from "./news/newsFormBuilder.js"
 import formBuilderAndEditor from "./events/formBuilderAndEditor.js"
 import eventListenerManager from "./messages/eventListeners.js"
 import renderNewsToDom from "./news/renderToDom.js"
+import handleAddArticleEvent from "./news/eventListeners.js"
 
 console.log(formBuilderAndEditor);
 
@@ -112,17 +113,26 @@ renderToDom.renderNewTaskButton()
 renderToDom.renderEditFormBuilder()
 renderToDom.rendertaskListHTMLBuilder(taskListTEST)
 
-// const articleTest = [{
-//     id: 0,
-//     name: "JavaScript",
-//     synopsis: "Leave me alone to die.",
-//     url: "http://www.alinkgoeshere.com"
-// }]
+    const articleTest = {
+        id: 0,
+        name: "JavaScript",
+        synopsis:"Leave me alone to die.",
+        url: "http://www.alinkgoeshere.com"
+    }
 
 
+<<<<<<< HEAD
 // renderNewsToDom.renderNewArticleButton()
 // renderNewsToDom.renderNewArticleForm()
 // renderNewsToDom.renderEditArticleForm(articleTest)
 // renderNewsToDom.renderNewArticleButton()
 // renderNewsToDom.renderNewArticleForm()
 // // renderNewsToDom.renderEditArticleForm(articleTest)
+=======
+renderNewsToDom.renderNewArticleButton()
+renderNewsToDom.renderNewArticleForm()
+renderNewsToDom.renderEditArticleForm(articleTest)
+// console.log(newsFormBuilder.editArticleFormBuilder(articleTest))
+
+//handleAddArticleEvent()
+>>>>>>> 177d7bb31c0ae428d046bda07cc4587dec1604b7
