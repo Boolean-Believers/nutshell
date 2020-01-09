@@ -17,13 +17,4 @@ const eventHTMLBuilder = (event) =>
     </section>
     `;
 
-    //Loop through each event, run the indivdual HTML builder, and add to the event list
-const eventListHTMLBuilder = {
-    listEventsHTML(events) {
-        let eventsHTML = "";
-        events.forEach(event => eventsHTML += eventHTMLBuilder(event));
-        return eventsHTML;
-    }
-}
-
-  export default eventListHTMLBuilder;
+  export default eventHTMLBuilder;

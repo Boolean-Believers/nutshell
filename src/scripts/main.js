@@ -5,21 +5,23 @@
 */
 
 import formBuilder from "./tasks/formBuilderAndEditor.js"
-import displayOnDOM from "./messages/renderToDOM.js"
 import taskListForm from "./tasks/taskListHTMLBuilder.js"
+import renderToDom from "./tasks/renderToDOM.js"
+import displayOnDOM from "./messages/renderToDOM.js"
+import eventListenerManager from "./messages/eventListeners.js"
 import chatMessagesManager from "./messages/chatMessagesManager.js"
 import data from "./messages/apiManager.js"
-import renderToDom from "./tasks/renderToDOM.js"
 import searchFriendBuilder from "./friends/friendListHTMLBuilder.js"
 import friendsOnTheDom from "./friends/renderDomFriends"
 import friendsObject from "./friends/friendListHTMLBuilder.js"
 import newsFormBuilder from "./news/newsFormBuilder.js"
+import renderNewsToDom from "./news/renderToDom.js"
+import handleAddArticleEvent from "./news/eventListeners.js"
 import formBuilderAndEditor from "./events/formBuilderAndEditor.js"
 import eventApiManager from "./events/apiManager.js"
-import eventListenerManager from "./messages/eventListeners.js"
-import renderNewsToDom from "./news/renderToDom.js"
 import eventListHTMLBuilder from "./events/eventListHTMLBuilder.js"
-import handleAddArticleEvent from "./news/eventListeners.js"
+import eventsRenderToDOM from "./events/renderToDOM.js"
+
 
 
 // eventApiManager.then(response => {
@@ -96,7 +98,7 @@ eventListenerManager.addEventListenerToContainer()
         completionDate:"2099/11/10"
     }]
 
-   
+
     friendsOnTheDom.renderSearchFriend()
     friendsOnTheDom.editFriends()
     friendsOnTheDom.listOfFriends()
@@ -125,8 +127,7 @@ Event list reference
 eventApiManager.getAllEvents()
     .then(events => {
         const eventListRef = document.querySelector("#events-container");
-        eventListRef.innerHTML = eventListHTMLBuilder.listEventsHTML(events);
-
+        eventListRef.innerHTML = eventsRenderToDOM.listEventsHTML(events);
     })
 
 renderNewsToDom.renderNewArticleButton()
